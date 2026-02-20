@@ -15,6 +15,19 @@ searchBtn.addEventListener('click', async () => {
     const weatherData = await getCurrentWeather(location);
     const forecastData = await getForecast(location);
     
+    if (weatherData && forecastData) {
+        document.getElementById('location').textContent = `${weatherData.location.name}, ${weatherData.location.country}`;
+        document.getElementById('temperature').textContent = `${weatherData.current.temp_c}°C`;
+        document.getElementById('condition').textContent = weatherData.current.condition.text;
+        document.getElementById('humidity').textContent = `: ${weatherData.current.humidity}%`;
+        document.getElementById('wind').textContent = `: ${weatherData.current.wind_kph} km/h`;
+
+        document.getElementById('forecast-temp-1').textContent = `${forecastData.forecast.forecastday[1].day.avgtemp_c}°C`;
+        document.getElementById('forecast-condition-1').textContent = forecastData.forecast.forecastday[1].day.condition.text;
+
+        document.getElementById('forecast-temp-2').textContent = `${forecastData.forecast.forecastday[2].day.avgtemp_c}°C`;
+        document.getElementById('forecast-condition-2').textContent = forecastData.forecast.forecastday[2].day.condition.text;
+    }
 });
 
 async function getCurrentWeather(location) {

@@ -111,3 +111,46 @@ button {
 button:hover {
     background: #764ba2;
 }
+
+.forecast {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.forecast h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.forecast-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.forecast-item {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.forecast-day {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.forecast-temp {
+    font-size: 20px;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.forecast-condition {
+    font-size: 12px;
+    color: #666;
+}
