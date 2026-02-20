@@ -16,7 +16,7 @@ searchBtn.addEventListener('click', async () => {
     const forecastData = await getForecast(location);
     
     if (weatherData && forecastData) {
-        document.getElementById('location').textContent = `${weatherData.location.name}, ${weatherData.location.country}`;
+        document.getElementById('location').textContent = `${weatherData.location.name}, ${weatherData.location.region}, ${weatherData.location.country}`;
         document.getElementById('temperature').textContent = `${weatherData.current.temp_c}°C`;
         document.getElementById('condition').textContent = weatherData.current.condition.text;
         document.getElementById('humidity').textContent = `: ${weatherData.current.humidity}%`;
