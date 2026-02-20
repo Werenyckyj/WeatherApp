@@ -1,0 +1,10 @@
+{
+    "name": "Weather forecast extension",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "A simple weather forecast browser extension.",
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": "images/icon.png"
+    }
+}
