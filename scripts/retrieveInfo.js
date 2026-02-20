@@ -24,10 +24,16 @@ searchBtn.addEventListener('click', async () => {
 
         document.getElementById('forecast-temp-1').textContent = `${forecastData.forecast.forecastday[1].day.avgtemp_c}°C`;
         document.getElementById('forecast-condition-1').textContent = forecastData.forecast.forecastday[1].day.condition.text;
+        document.getElementById('forecast-min-1').textContent = `Min: ${forecastData.forecast.forecastday[1].day.mintemp_c}°C`;
+        document.getElementById('forecast-max-1').textContent = `Max: ${forecastData.forecast.forecastday[1].day.maxtemp_c}°C`;
+        document.getElementById('forecast-rain-1').textContent = `Rain: ${forecastData.forecast.forecastday[1].day.daily_chance_of_rain}%`;
 
         document.getElementById('forecast-temp-2').textContent = `${forecastData.forecast.forecastday[2].day.avgtemp_c}°C`;
         document.getElementById('forecast-condition-2').textContent = forecastData.forecast.forecastday[2].day.condition.text;
-    }
+        document.getElementById('forecast-min-2').textContent = `Min: ${forecastData.forecast.forecastday[2].day.mintemp_c}°C`;
+        document.getElementById('forecast-max-2').textContent = `Max: ${forecastData.forecast.forecastday[2].day.maxtemp_c}°C`;
+        document.getElementById('forecast-rain-2').textContent = `Rain: ${forecastData.forecast.forecastday[2].day.daily_chance_of_rain}%`;
+    }   
 });
 
 async function getCurrentWeather(location) {
